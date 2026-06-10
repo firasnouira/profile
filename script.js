@@ -52,6 +52,80 @@ function revealOnScroll() {
   });
 }
 
+// ---- MODAL INTERACTIONS ----
+const modalOverlay = document.getElementById('modal-overlay');
+const modalClose = document.getElementById('modal-close');
+const openCtnModal = document.getElementById('open-ctn-modal');
+const previewTrigger = document.getElementById('ctn-preview-trigger');
+
+function openModal() {
+  modalOverlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  modalOverlay.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+if (openCtnModal) {
+  openCtnModal.addEventListener('click', openModal);
+}
+
+if (previewTrigger) {
+  previewTrigger.addEventListener('click', openModal);
+}
+
+if (modalClose) {
+  modalClose.addEventListener('click', closeModal);
+}
+
+if (modalOverlay) {
+  modalOverlay.addEventListener('click', event => {
+    if (event.target === modalOverlay) {
+      closeModal();
+    }
+  });
+}
+
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape' && modalOverlay.classList.contains('open')) {
+    closeModal();
+  }
+});
+
+// ---- MOBILE SIDEBAR TOGGLE ----
+const mobileHamburger = document.getElementById('mobile-hamburger');
+const mobileOverlay = document.getElementById('mobile-overlay');
+
+function openSidebar() {
+  document.body.classList.add('sidebar-open');
+  if (mobileHamburger) mobileHamburger.setAttribute('aria-expanded', 'true');
+}
+
+function closeSidebar() {
+  document.body.classList.remove('sidebar-open');
+  if (mobileHamburger) mobileHamburger.setAttribute('aria-expanded', 'false');
+}
+
+if (mobileHamburger) {
+  mobileHamburger.addEventListener('click', () => {
+    if (document.body.classList.contains('sidebar-open')) closeSidebar(); else openSidebar();
+  });
+}
+
+if (mobileOverlay) {
+  mobileOverlay.addEventListener('click', closeSidebar);
+}
+
+// Close sidebar when clicking a nav link (mobile)
+const mobileNavLinks = document.querySelectorAll('#nav a');
+mobileNavLinks.forEach(a => {
+  a.addEventListener('click', () => {
+    if (window.innerWidth <= 900) closeSidebar();
+  });
+});
+
 // ---- INIT ----
 window.addEventListener('scroll', () => {
   updateNav();
