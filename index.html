@@ -11,6 +11,13 @@
 </head>
 <body>
 
+  <!-- Language Selector (fixed, top-left) -->
+  <div class="lang-selector" id="lang-selector">
+    <button class="lang-btn lang-btn--active" data-lang="en" title="English">EN</button>
+    <button class="lang-btn" data-lang="fr" title="Français">FR</button>
+    <button class="lang-btn" data-lang="de" title="Deutsch">DEU</button>
+  </div>
+
   <!-- Mobile hamburger + overlay -->
   <button id="mobile-hamburger" class="mobile-hamburger" aria-label="Open menu" aria-expanded="false">
     <svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -26,11 +33,11 @@
     <div class="brand">FN</div>
     <nav id="nav">
       <ul>
-        <li class="home"><a href="#home">Home</a></li>
-        <li class="experience"><a href="#experience">Experience</a></li>
-        <li class="projects"><a href="#projects">Projects</a></li>
-        <li class="skills"><a href="#skills">Skills</a></li>
-        <li class="contact"><a href="#contact">Contact</a></li>
+        <li class="home"><a href="#home" data-i18n="nav-home">Home</a></li>
+        <li class="experience"><a href="#experience" data-i18n="nav-experience">Experience</a></li>
+        <li class="projects"><a href="#projects" data-i18n="nav-projects">Projects</a></li>
+        <li class="skills"><a href="#skills" data-i18n="nav-skills">Skills</a></li>
+        <li class="contact"><a href="#contact" data-i18n="nav-contact">Contact</a></li>
       </ul>
     </nav>
   </aside>
@@ -45,12 +52,12 @@
           <img class="photo-img" src="assets/profile-modified.png" alt="Firas Nouira" />
         </div>
         <div class="home-text">
-          <p class="home-label">Full-Stack Developer</p>
-          <h1 class="home-name">Firas<br /><em>Nouira</em></h1>
-          <p class="home-bio">I build end-to-end web applications — clean code, solid architecture, interfaces that work. Based in Tunis, open to remote opportunities.</p>
+          <p class="home-label" data-i18n="home-label">Full-Stack Developer</p>
+          <h1 class="home-name" data-i18n="home-name-first">Firas<br /><em data-i18n="home-name-second">Nouira</em></h1>
+          <p class="home-bio" data-i18n="home-bio">I build end-to-end web applications — clean code, solid architecture, interfaces that work. Based in Tunis, open to remote opportunities.</p>
           <div class="home-cta">
-            <a href="#projects" class="btn">View Projects</a>
-            <a href="#contact" class="btn btn--outline">Contact</a>
+            <a href="#projects" class="btn" data-i18n="home-cta-projects">View Projects</a>
+            <a href="#contact" class="btn btn--outline" data-i18n="home-cta-contact">Contact</a>
           </div>
         </div>
       </div>
@@ -61,7 +68,7 @@
       <div class="section-inner">
         <header class="section-header reveal">
           <span class="section-num">01</span>
-          <h2 class="section-title">Experience</h2>
+          <h2 class="section-title" data-i18n="exp-title">Experience</h2>
         </header>
         <div class="timeline">
           <div class="tl-item reveal">
@@ -71,8 +78,8 @@
                 <span class="tl-date">2024 — 2026</span>
                 <span class="tl-company">CTN — Compagnie Tunisienne de Navigation</span>
               </div>
-              <h3 class="tl-role">Full-Stack Developer</h3>
-              <p class="tl-desc">Built an MVP for a logistics and container management platform for tracking and managing logistic operations and data.</p>
+              <h3 class="tl-role" data-i18n="exp-role-1">Full-Stack Intern</h3>
+              <p class="tl-desc" data-i18n="exp-desc-1">Built an MVP for a logistics and container management platform for tracking and managing logistic operations and data.</p>
               <div class="tags">
                 <span class="tech"><svg class="tech-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="11" fill="#DD0031"/><text x="12" y="16" font-size="11" text-anchor="middle" fill="#fff" font-family="Arial">A</text></svg><span>Angular</span></span>
                 <span class="tech"><svg class="tech-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="11" fill="#000000"/><text x="12" y="16" font-size="9" text-anchor="middle" fill="#fff" font-family="Arial">ex</text></svg><span>Express.js</span></span>
@@ -90,7 +97,7 @@
       <div class="section-inner">
         <header class="section-header reveal">
           <span class="section-num">02</span>
-          <h2 class="section-title">Projects</h2>
+          <h2 class="section-title" data-i18n="proj-title">Projects</h2>
         </header>
 
         <div class="projects-grid">
@@ -101,7 +108,7 @@
               <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true">
                 <circle cx="5" cy="5" r="4" fill="currentColor"/>
               </svg>
-              Featured
+              <span data-i18n="proj-featured">Featured</span>
             </div>
 
             <div class="pinned-layout">
@@ -165,8 +172,8 @@
               <!-- Right: info -->
               <div class="pinned-info">
                 <div class="project-number">01</div>
-                <h3 class="project-name">Smart Container<br/>Logistics Platform</h3>
-                <p class="project-short">
+                <h3 class="project-name" data-i18n="proj-1-name">Smart Container<br/>Logistics Platform</h3>
+                <p class="project-short" data-i18n="proj-1-desc">
                   End-to-end maritime logistics system built for CTN. Covers expedition creation, 
                   automated 3D bin-packing, multi-port pathfinding, real-time vessel tracking via AIS, 
                   and a role-based operator dashboard.
@@ -179,10 +186,10 @@
                   <span class="tech"><svg class="tech-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="20" height="20" rx="3" fill="#2496ED"/><text x="12" y="16" font-size="10" text-anchor="middle" fill="#fff" font-family="Arial">D</text></svg><span>Docker</span></span>
                 </div>
                 <div class="pinned-actions">
-                  <button class="btn pinned-btn" id="open-ctn-modal">
+                  <button class="btn pinned-btn" id="open-ctn-modal" data-i18n="btn-details">
                     View details ↗
                   </button>
-                  <a href="https://pfe-three-topaz.vercel.app/" target="_blank" rel="noopener" class="btn btn--outline pinned-btn">
+                  <a href="https://pfe-three-topaz.vercel.app/" target="_blank" rel="noopener" class="btn btn--outline pinned-btn" data-i18n="btn-demo">
                     Live demo ↗
                   </a>
                 </div>
@@ -192,8 +199,8 @@
 
           <article class="project-card reveal" data-project="path-holes-detector">
             <div class="project-number">02</div>
-            <h3 class="project-name">Path Holes Detector</h3>
-            <p class="project-short">
+            <h3 class="project-name" data-i18n="proj-2-name">Path Holes Detector</h3>
+            <p class="project-short" data-i18n="proj-2-desc">
               AI-powered road defect detection and reporting system. Detects potholes from image, video, or webcam input, pins them to a shared map, and supports citizen reporting with live map updates.
             </p>
             <div class="tags">
@@ -246,8 +253,8 @@
 
             <!-- Side quick-info -->
             <div class="modal-quick-info">
-              <div class="mqi-badge">Featured Project</div>
-              <h2 class="mqi-title">Smart Container Logistics Platform</h2>
+              <div class="mqi-badge" data-i18n="modal-featured">Featured Project</div>
+              <h2 class="mqi-title" data-i18n="modal-title-1">Smart Container Logistics Platform</h2>
               <p class="mqi-client">
                 <span class="mqi-label">Client</span>
                 CTN — Compagnie Tunisienne de Navigation
@@ -276,18 +283,18 @@
 
           <!-- ABOUT -->
           <div class="modal-section">
-            <h3 class="modal-section-title">About the project</h3>
-            <p class="modal-text">
+            <h3 class="modal-section-title" data-i18n="modal-about-title">About the project</h3>
+            <p class="modal-text" data-i18n="modal-about-1">
               CTN is a state-owned Tunisian shipping line handling ~100,000 transport units annually. Their container shipping operations were entirely managed through manual, informal processes — clients submitted requests through ad-hoc channels, agents manually selected voyages and assigned containers based on experience alone.
             </p>
-            <p class="modal-text">
+            <p class="modal-text" data-i18n="modal-about-2">
               This platform digitizes and optimizes that entire workflow: from expedition request to real-time vessel tracking, with automated container space optimization and intelligent route planning baked in.
             </p>
           </div>
 
           <!-- KEY FEATURES -->
           <div class="modal-section">
-            <h3 class="modal-section-title">Key features</h3>
+            <h3 class="modal-section-title" data-i18n="modal-features-title">Key features</h3>
             <div class="modal-features-grid">
               <div class="modal-feature">
                 <div class="mf-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--accent)"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><polyline points="12 22.08 12 12"/></svg></div>
@@ -478,11 +485,11 @@
       <div class="section-inner">
         <header class="section-header reveal">
           <span class="section-num">03</span>
-          <h2 class="section-title">Skills</h2>
+          <h2 class="section-title" data-i18n="skills-title">Skills</h2>
         </header>
         <div class="skills-layout reveal">
           <div class="skill-col">
-            <h3 class="skill-col-title">Frontend</h3>
+            <h3 class="skill-col-title" data-i18n="skill-frontend">Frontend</h3>
             <ul>
               <li>Angular</li>
               <li>React</li>
@@ -491,7 +498,7 @@
             </ul>
           </div>
           <div class="skill-col">
-            <h3 class="skill-col-title">Backend</h3>
+            <h3 class="skill-col-title" data-i18n="skill-backend">Backend</h3>
             <ul>
               <li>Node.js / Express</li>
               <li>TypeScript / Python / Java</li>
@@ -501,7 +508,7 @@
             </ul>
           </div>
           <div class="skill-col">
-            <h3 class="skill-col-title">DevOps &amp; Tools</h3>
+            <h3 class="skill-col-title" data-i18n="skill-devops">DevOps &amp; Tools</h3>
             <ul>
               <li>Docker / Kubernetes</li>
               <li>Git &amp; CI/CD</li>
@@ -510,13 +517,13 @@
           </div>
         </div>
         <div class="education reveal">
-          <h3 class="skill-col-title">Education</h3>
+          <h3 class="skill-col-title" data-i18n="skill-education">Education</h3>
           <div class="edu-row">
             <div>
-              <p class="edu-degree">B.Sc. Computer Science</p>
-              <p class="edu-school">University of Monastir</p>
+              <p class="edu-degree" data-i18n="edu-degree">B.Sc. Computer Science</p>
+              <p class="edu-school" data-i18n="edu-school">University of Monastir</p>
             </div>
-            <span class="edu-year">2017 — 2021</span>
+            <span class="edu-year">2022 — 2025</span>
           </div>
         </div>
       </div>
@@ -527,21 +534,21 @@
       <div class="section-inner">
         <header class="section-header reveal">
           <span class="section-num">04</span>
-          <h2 class="section-title">Contact</h2>
+          <h2 class="section-title" data-i18n="contact-title">Contact</h2>
         </header>
         <div class="contact-list reveal">
           <a href="mailto:nouira.firas.dev@gmail.com" class="contact-row">
-            <span class="contact-type">Email</span>
+            <span class="contact-type" data-i18n="contact-email-label">Email</span>
             <span class="contact-value">nouira.firas.dev@gmail.com</span>
             <span class="contact-arrow">↗</span>
           </a>
           <a href="https://linkedin.com/in/firasnouira" target="_blank" rel="noopener" class="contact-row">
-            <span class="contact-type">LinkedIn</span>
+            <span class="contact-type" data-i18n="contact-linkedin-label">LinkedIn</span>
             <span class="contact-value">linkedin.com/in/firasnouira</span>
             <span class="contact-arrow">↗</span>
           </a>
           <a href="https://github.com/firasnouira" target="_blank" rel="noopener" class="contact-row">
-            <span class="contact-type">GitHub</span>
+            <span class="contact-type" data-i18n="contact-github-label">GitHub</span>
             <span class="contact-value">github.com/firasnouira</span>
             <span class="contact-arrow">↗</span>
           </a>
