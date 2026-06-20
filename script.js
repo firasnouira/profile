@@ -156,44 +156,44 @@ const translations = {
     'home-label': 'Full-Stack Developer',
     'home-name-first': 'Firas',
     'home-name-second': 'Nouira',
-    'home-bio': 'I build end-to-end web applications — clean code, solid architecture, interfaces that work. Based in Tunis, open to remote opportunities.',
+    'home-bio': 'I build end-to-end web applications clean code, solid architecture, interfaces that work.interesed in the back- end, algorithmic and logic side of things.',
     'home-cta-projects': 'View Projects',
-    'home-cta-contact': 'Contact',
-    // Experience
-    'exp-title': 'Experience',
-    'exp-role-1': 'Full-Stack Developer',
-    'exp-desc-1': 'Built an MVP for a logistics and container management platform for tracking and managing logistic operations and data.',
-    // Projects
-    'proj-title': 'Projects',
-    'proj-featured': 'Featured',
-    'proj-1-name': 'Smart Container\nLogistics Platform',
-    'proj-1-desc': 'End-to-end maritime logistics system built for CTN. Covers expedition creation, automated 3D bin-packing, multi-port pathfinding, real-time vessel tracking via AIS, and a role-based operator dashboard.',
-    'proj-2-name': 'Path Holes Detector',
-    'proj-2-desc': 'AI-powered road defect detection and reporting system. Detects potholes from image, video, or webcam input, pins them to a shared map, and supports citizen reporting with live map updates.',
-    // Buttons
-    'btn-details': 'View details ↗',
-    'btn-demo': 'Live demo ↗',
-    // Modal
-    'modal-featured': 'Featured Project',
-    'modal-title-1': 'Smart Container Logistics Platform',
-    'modal-about-title': 'About the project',
-    'modal-about-1': 'CTN is a state-owned Tunisian shipping line handling ~100,000 transport units annually. Their container shipping operations were entirely managed through manual, informal processes — clients submitted requests through ad-hoc channels, agents manually selected voyages and assigned containers based on experience alone.',
-    'modal-about-2': 'This platform digitizes and optimizes that entire workflow: from expedition request to real-time vessel tracking, with automated container space optimization and intelligent route planning baked in.',
-    'modal-features-title': 'Key features',
-    // Skills
-    'skills-title': 'Skills',
-    'skill-frontend': 'Frontend',
-    'skill-backend': 'Backend',
-    'skill-devops': 'DevOps & Tools',
-    'skill-education': 'Education',
-    'edu-degree': 'B.Sc. Computer Science',
-    'edu-school': 'University of Monastir',
-    // Contact
-    'contact-title': 'Contact',
-    'contact-email-label': 'Email',
-    'contact-linkedin-label': 'LinkedIn',
-    'contact-github-label': 'GitHub',
-  },
+  'home-cta-contact': 'Contact',
+  // Experience
+  'exp-title': 'Experience',
+  'exp-role-1': 'Full-Stack Developer',
+  'exp-desc-1': 'Built an MVP for a logistics and container management platform for tracking and managing logistic operations and data.',
+  // Projects
+  'proj-title': 'Projects',
+  'proj-featured': 'Featured',
+  'proj-1-name': 'Smart Container\nLogistics Platform',
+  'proj-1-desc': 'End-to-end maritime logistics system built for CTN. Covers expedition creation, automated 3D bin-packing, multi-port pathfinding, real-time vessel tracking via AIS, and a role-based operator dashboard.',
+  'proj-2-name': 'Path Holes Detector',
+  'proj-2-desc': 'AI-powered road defect detection and reporting system. Detects potholes from image, video, or webcam input, pins them to a shared map, and supports citizen reporting with live map updates.',
+  // Buttons
+  'btn-details': 'View details ↗',
+  'btn-demo': 'Live demo ↗',
+  // Modal
+  'modal-featured': 'Featured Project',
+  'modal-title-1': 'Smart Container Logistics Platform',
+  'modal-about-title': 'About the project',
+  'modal-about-1': 'CTN is a state-owned Tunisian shipping line handling ~100,000 transport units annually. Their container shipping operations were entirely managed through manual, informal processes — clients submitted requests through ad-hoc channels, agents manually selected voyages and assigned containers based on experience alone.',
+  'modal-about-2': 'This platform digitizes and optimizes that entire workflow: from expedition request to real-time vessel tracking, with automated container space optimization and intelligent route planning baked in.',
+  'modal-features-title': 'Key features',
+  // Skills
+  'skills-title': 'Skills',
+  'skill-frontend': 'Frontend',
+  'skill-backend': 'Backend',
+  'skill-devops': 'DevOps & Tools',
+  'skill-education': 'Education',
+  'edu-degree': 'B.Sc. Computer Science',
+  'edu-school': 'University of Monastir',
+  // Contact
+  'contact-title': 'Contact',
+  'contact-email-label': 'Email',
+  'contact-linkedin-label': 'LinkedIn',
+  'contact-github-label': 'GitHub',
+},
   fr: {
     // Navigation
     'nav-home': 'Accueil',
@@ -205,7 +205,7 @@ const translations = {
     'home-label': 'Développeur Full-Stack',
     'home-name-first': 'Firas',
     'home-name-second': 'Nouira',
-    'home-bio': 'Je construis des applications web de bout en bout — code propre, architecture solide, interfaces qui fonctionnent. Basé à Tunis, ouvert aux opportunités à distance.',
+    'home-bio': 'Je développe des applications web complètes : code propre, architecture solide, interfaces fonctionnelles. Je m’intéresse au côté back-end, aux algorithmes et à la logique.',
     'home-cta-projects': 'Voir Projets',
     'home-cta-contact': 'Contact',
     // Experience
@@ -254,7 +254,7 @@ const translations = {
     'home-label': 'Full-Stack-Entwickler',
     'home-name-first': 'Firas',
     'home-name-second': 'Nouira',
-    'home-bio': 'Ich entwickle End-to-End-Webanwendungen — sauberer Code, solide Architektur, funktionierende Schnittstellen. Basierend in Tunis, offen für Remote-Möglichkeiten.',
+    'home-bio': 'Ich entwickle durchgängige Webanwendungen – sauberer Code, solide Architektur, funktionierende Schnittstellen. Ich interessiere mich für den Backend-Bereich, die algorithmische und logische Seite.',
     'home-cta-projects': 'Projekte Anzeigen',
     'home-cta-contact': 'Kontakt',
     // Experience
@@ -318,17 +318,17 @@ function setLanguage(lang) {
     const key = el.getAttribute('data-i18n');
     if (translations[lang] && translations[lang][key]) {
       const text = translations[lang][key];
-      
+
       // Special handling for home name to preserve formatting
       if (el.classList.contains('home-name')) {
         const firstName = translations[lang]['home-name-first'];
         const secondName = translations[lang]['home-name-second'];
         el.innerHTML = `${firstName}<br /><em>${secondName}</em>`;
-      } 
+      }
       // Handle project names and other content with line breaks
       else if (text.includes('\n')) {
         el.innerHTML = text.replace(/\n/g, '<br />');
-      } 
+      }
       else {
         el.textContent = text;
       }
@@ -353,16 +353,16 @@ initLanguage();
 // Single source of truth for all technology icons.
 // Usage in HTML: <div class="tags" data-techs="Angular,Docker,MongoDB"></div>
 const TECH_DEFS = {
-  'Angular':     { shape: 'circle', fill: '#DD0031', textFill: '#fff', label: 'A',    fontSize: 11 },
-  'Express.js':  { shape: 'circle', fill: '#000',    textFill: '#fff', label: 'ex',   fontSize: 9  },
-  'MongoDB':     { shape: 'circle', fill: '#47A248', textFill: '#fff', label: 'DB',   fontSize: 10 },
-  'Three.js':    { shape: 'circle', fill: '#F7A400', textFill: '#fff', label: '3',    fontSize: 11 },
-  'Python':      { shape: 'circle', fill: '#3776AB', textFill: '#fff', label: 'Py',   fontSize: 10 },
-  'YOLOv8':      { shape: 'circle', fill: '#FFB300', textFill: '#000', label: 'YOLO', fontSize: 10 },
-  'Docker':      { shape: 'rect',   fill: '#2496ED', textFill: '#fff', label: 'D',    fontSize: 10 },
-  'TypeScript':  { shape: 'rect',   fill: '#007ACC', textFill: '#fff', label: 'TS',   fontSize: 10, rx: 2, y: 4, h: 16 },
-  'React':       { shape: 'rect',   fill: '#61DAFB', textFill: '#000', label: 'R',    fontSize: 10 },
-  'Flask':       { shape: 'rect',   fill: '#005A9C', textFill: '#fff', label: 'Fl',   fontSize: 10, rx: 0, x: 4, y: 4, w: 16, h: 16 },
+  'Angular': { shape: 'circle', fill: '#DD0031', textFill: '#fff', label: 'A', fontSize: 11 },
+  'Express.js': { shape: 'circle', fill: '#000', textFill: '#fff', label: 'ex', fontSize: 9 },
+  'MongoDB': { shape: 'circle', fill: '#47A248', textFill: '#fff', label: 'DB', fontSize: 10 },
+  'Three.js': { shape: 'circle', fill: '#F7A400', textFill: '#fff', label: '3', fontSize: 11 },
+  'Python': { shape: 'circle', fill: '#3776AB', textFill: '#fff', label: 'Py', fontSize: 10 },
+  'YOLOv8': { shape: 'circle', fill: '#FFB300', textFill: '#000', label: 'YOLO', fontSize: 10 },
+  'Docker': { shape: 'rect', fill: '#2496ED', textFill: '#fff', label: 'D', fontSize: 10 },
+  'TypeScript': { shape: 'rect', fill: '#007ACC', textFill: '#fff', label: 'TS', fontSize: 10, rx: 2, y: 4, h: 16 },
+  'React': { shape: 'rect', fill: '#61DAFB', textFill: '#000', label: 'R', fontSize: 10 },
+  'Flask': { shape: 'rect', fill: '#005A9C', textFill: '#fff', label: 'Fl', fontSize: 10, rx: 0, x: 4, y: 4, w: 16, h: 16 },
 };
 
 function makeTechBadge(name) {
@@ -398,11 +398,11 @@ document.querySelectorAll('[data-techs]').forEach(container => {
   const carousel = document.getElementById('iface-carousel');
   if (!carousel) return;
 
-  const slides  = Array.from(carousel.querySelectorAll('.iface-slide'));
-  const dots    = Array.from(carousel.querySelectorAll('.iface-dot'));
+  const slides = Array.from(carousel.querySelectorAll('.iface-slide'));
+  const dots = Array.from(carousel.querySelectorAll('.iface-dot'));
   const counter = document.getElementById('iface-cur');
-  const lbl     = document.getElementById('iface-lbl');
-  let current   = 0;
+  const lbl = document.getElementById('iface-lbl');
+  let current = 0;
 
   function goTo(n) {
     slides[current].classList.remove('iface-slide--active');
@@ -411,7 +411,7 @@ document.querySelectorAll('[data-techs]').forEach(container => {
     slides[current].classList.add('iface-slide--active');
     dots[current].classList.add('iface-dot--active');
     if (counter) counter.textContent = current + 1;
-    if (lbl)     lbl.innerHTML = slides[current].dataset.label || '';
+    if (lbl) lbl.innerHTML = slides[current].dataset.label || '';
   }
 
   // Single shared nav bar — two buttons with data-action="prev" / "next"
