@@ -349,3 +349,79 @@ langBtns.forEach(btn => {
 
 // Initialize on page load
 initLanguage();
+// ---- TECH BADGE RENDERER ----
+// Single source of truth for all technology icons.
+// Usage in HTML: <div class="tags" data-techs="Angular,Docker,MongoDB"></div>
+const TECH_DEFS = {
+  'Angular':     { shape: 'circle', fill: '#DD0031', textFill: '#fff', label: 'A',    fontSize: 11 },
+  'Express.js':  { shape: 'circle', fill: '#000',    textFill: '#fff', label: 'ex',   fontSize: 9  },
+  'MongoDB':     { shape: 'circle', fill: '#47A248', textFill: '#fff', label: 'DB',   fontSize: 10 },
+  'Three.js':    { shape: 'circle', fill: '#F7A400', textFill: '#fff', label: '3',    fontSize: 11 },
+  'Python':      { shape: 'circle', fill: '#3776AB', textFill: '#fff', label: 'Py',   fontSize: 10 },
+  'YOLOv8':      { shape: 'circle', fill: '#FFB300', textFill: '#000', label: 'YOLO', fontSize: 10 },
+  'Docker':      { shape: 'rect',   fill: '#2496ED', textFill: '#fff', label: 'D',    fontSize: 10 },
+  'TypeScript':  { shape: 'rect',   fill: '#007ACC', textFill: '#fff', label: 'TS',   fontSize: 10, rx: 2, y: 4, h: 16 },
+  'React':       { shape: 'rect',   fill: '#61DAFB', textFill: '#000', label: 'R',    fontSize: 10 },
+  'Flask':       { shape: 'rect',   fill: '#005A9C', textFill: '#fff', label: 'Fl',   fontSize: 10, rx: 0, x: 4, y: 4, w: 16, h: 16 },
+};
+
+function makeTechBadge(name) {
+  const def = TECH_DEFS[name];
+  if (!def) return '';
+
+  let shape;
+  if (def.shape === 'circle') {
+    shape = `<circle cx="12" cy="12" r="11" fill="${def.fill}"/>`;
+  } else {
+    const x = def.x ?? 2, y = def.y ?? 2;
+    const w = def.w ?? 20, h = def.h ?? 20;
+    const rx = def.rx ?? 3;
+    shape = `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${rx}" fill="${def.fill}"/>`;
+  }
+
+  const svg = `<svg class="tech-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    ${shape}
+    <text x="12" y="16" font-size="${def.fontSize}" text-anchor="middle" fill="${def.textFill}" font-family="Arial">${def.label}</text>
+  </svg>`;
+
+  return `<span class="tech">${svg}<span>${name}</span></span>`;
+}
+
+// Render all [data-techs] containers
+document.querySelectorAll('[data-techs]').forEach(container => {
+  const names = container.getAttribute('data-techs').split(',').map(s => s.trim());
+  container.innerHTML = names.map(makeTechBadge).join('');
+});
+
+// ---- INTERFACE CAROUSEL ----
+(function () {
+  const carousel = document.getElementById('iface-carousel');
+  if (!carousel) return;
+
+  const slides  = Array.from(carousel.querySelectorAll('.iface-slide'));
+  const dots    = Array.from(carousel.querySelectorAll('.iface-dot'));
+  const counter = document.getElementById('iface-cur');
+  const lbl     = document.getElementById('iface-lbl');
+  let current   = 0;
+
+  function goTo(n) {
+    slides[current].classList.remove('iface-slide--active');
+    dots[current].classList.remove('iface-dot--active');
+    current = (n + slides.length) % slides.length;
+    slides[current].classList.add('iface-slide--active');
+    dots[current].classList.add('iface-dot--active');
+    if (counter) counter.textContent = current + 1;
+    if (lbl)     lbl.innerHTML = slides[current].dataset.label || '';
+  }
+
+  // Single shared nav bar — two buttons with data-action="prev" / "next"
+  carousel.querySelectorAll('[data-action]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      goTo(current + (btn.dataset.action === 'next' ? 1 : -1));
+    });
+  });
+
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => goTo(parseInt(dot.dataset.target, 10)));
+  });
+})();
