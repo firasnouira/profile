@@ -83,6 +83,7 @@ a {
   flex: 1;
   display: flex;
   align-items: center;
+  margin-top: 4.25rem;
 }
 
 #nav ul {
@@ -625,7 +626,7 @@ body.home-active .sidebar #nav ul li:not(.home) {
   display: grid;
   grid-template-columns: 1.8fr 1fr;
   gap: 1.5rem;
-  align-items: start;
+  align-items: stretch;
   margin-bottom: 1.8rem;
 }
 
@@ -1387,6 +1388,259 @@ body.home-active .sidebar #nav ul li:not(.home) {
   color: var(--accent);
 }
 
+/* ── README TOGGLE (dark, on-brand) ─────────────────── */
+.modal-section--readme {
+  margin-top: 2rem;
+}
+
+.readme-toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1.15rem 1.4rem;
+  cursor: pointer;
+  text-align: left;
+  color: var(--accent);
+  transition: border-color 0.15s;
+}
+
+.readme-toggle:hover {
+  border-color: var(--accent);
+}
+
+.readme-toggle[aria-expanded="true"] {
+  border-color: var(--accent);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.readme-toggle-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  flex: 1;
+}
+
+.readme-toggle-title {
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.readme-toggle-sub {
+  font-size: 0.78rem;
+  color: var(--muted);
+  font-weight: 300;
+}
+
+.readme-toggle-chevron {
+  color: var(--muted);
+  transition: transform 0.2s ease;
+  font-size: 0.9rem;
+}
+
+.readme-toggle[aria-expanded="true"] .readme-toggle-chevron {
+  transform: rotate(180deg);
+}
+
+.readme-content {
+  border: 1px solid var(--border);
+  border-top: none;
+  border-radius: 0 0 6px 6px;
+  overflow: hidden;
+}
+
+
+
+/* ── GitHub markdown-body reproduction ───────────────── */
+.markdown-body {
+  background: #ffffff;
+  color: #1f2328;
+  font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: 0.95rem;
+  line-height: 1.6;
+  padding: 2rem 2.25rem 2.75rem;
+  max-height: 640px;
+  overflow-y: auto;
+}
+
+.gh-h1 {
+  font-size: 1.85rem;
+  font-weight: 600;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid #d1d9e0;
+  margin: 0 0 1rem;
+}
+
+.gh-h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid #d1d9e0;
+  margin: 1.75rem 0 1rem;
+}
+
+.gh-h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 1.5rem 0 0.8rem;
+}
+
+.gh-p {
+  margin: 0 0 1rem;
+}
+
+.gh-p strong {
+  font-weight: 600;
+}
+
+.gh-ul,
+.gh-ol {
+  margin: 0 0 1rem;
+  padding-left: 1.8rem;
+}
+
+.gh-ul li,
+.gh-ol li {
+  margin-bottom: 0.3rem;
+}
+
+.gh-ul {
+  list-style: disc;
+}
+
+.gh-ol {
+  list-style: decimal;
+}
+
+.gh-hr {
+  border: none;
+  border-top: 1px solid #d1d9e0;
+  margin: 1.75rem 0;
+}
+
+.gh-quote {
+  border-left: 0.25em solid #d1d9e0;
+  color: #57606a;
+  padding: 0 1em;
+  margin: 0 0 1rem;
+}
+
+.gh-quote--nested {
+  border-left-color: #b8c0c8;
+  margin-left: 0.5rem;
+}
+
+.gh-fig-caption {
+  font-size: 0.85rem;
+  margin-top: -0.5rem;
+}
+
+.gh-fig-row,
+.gh-fig-stack {
+  margin: 0.5rem 0 0.25rem;
+  text-align: center;
+}
+
+.gh-fig-row img,
+.gh-fig-stack img {
+  max-width: 100%;
+  border-radius: 4px;
+  border: 1px solid #d1d9e0;
+}
+
+.gh-fig-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.gh-fig-stack img {
+  width: 100%;
+}
+
+.gh-details {
+  border: 1px solid #d1d9e0;
+  border-radius: 6px;
+  padding: 0.6rem 1rem;
+  margin: 0 0 1rem;
+}
+
+.gh-details summary {
+  cursor: pointer;
+  font-weight: 500;
+  color: #0969da;
+}
+
+.gh-details[open] summary {
+  margin-bottom: 0.75rem;
+}
+
+.gh-pre {
+  background: #f6f8fa;
+  border-radius: 6px;
+  padding: 1rem;
+  overflow-x: auto;
+  margin: 0 0 1rem;
+  font-size: 0.85rem;
+}
+
+.gh-pre code {
+  font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
+  color: #1f2328;
+}
+
+.gh-comment {
+  color: #6e7781;
+}
+
+.markdown-body code {
+  font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
+  background: rgba(175, 184, 193, 0.2);
+  border-radius: 4px;
+  padding: 0.15em 0.4em;
+  font-size: 0.85em;
+}
+
+.gh-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 0 1rem;
+  font-size: 0.9rem;
+}
+
+.gh-table th,
+.gh-table td {
+  border: 1px solid #d1d9e0;
+  padding: 0.5rem 0.9rem;
+  text-align: left;
+}
+
+.gh-table th {
+  background: #f6f8fa;
+  font-weight: 600;
+}
+
+.gh-table tr:nth-child(2n) td {
+  background: #f6f8fa;
+}
+
+.markdown-body a {
+  color: #0969da;
+  text-decoration: none;
+}
+
+.markdown-body a:hover {
+  text-decoration: underline;
+}
+
 /* ── SKILLS ──────────────────────────────────────────── */
 .skills-layout {
   display: grid;
@@ -1712,6 +1966,10 @@ body.home-active .sidebar #nav ul li:not(.home) {
 
   .section {
     padding: 4rem 1.5rem;
+  }
+
+  .modal {
+    width: 95vw;
   }
 }
 
@@ -2169,6 +2427,7 @@ body.home-active .sidebar #nav ul li:not(.home) {
   .modal-body {
     padding: 0.75rem;
   }
+
   .algo-cards {
     grid-template-columns: 1fr;
   }
@@ -2184,15 +2443,25 @@ body.home-active .sidebar #nav ul li:not(.home) {
   .iface-img-wrap--full {
     height: 380px;
   }
-.iface-nav-bar{
-  flex-direction: column;
-  gap: 0.5rem;
-}
-.modal-section--algo{
-  padding: 0;
-  .algo-card{
-    padding: 0.75rem;
-  }
-}
 
+  .iface-nav-bar {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .modal-section--algo {
+    padding: 0;
+
+    .algo-card {
+      padding: 0.75rem;
+    }
+  }
+
+  .markdown-body {
+    padding: 0.5rem;
+
+    table td {
+      padding: 0.25rem 0.5rem;
+    }
+  }
 }

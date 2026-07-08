@@ -425,3 +425,10 @@ document.querySelectorAll('[data-techs]').forEach(container => {
     dot.addEventListener('click', () => goTo(parseInt(dot.dataset.target, 10)));
   });
 })();
+document.getElementById('readme-toggle').addEventListener('click', function () {
+  const content = document.getElementById('readme-content');
+  const expanded = this.getAttribute('aria-expanded') === 'true';
+  this.setAttribute('aria-expanded', String(!expanded));
+  content.hidden = expanded;
+  this.querySelector('.readme-toggle-title').textContent = expanded ? 'Show full README' : 'Hide README';
+});
