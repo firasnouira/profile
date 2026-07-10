@@ -261,8 +261,8 @@
 
           <!-- CORE ALGORITHMS — highlighted -->
           <div class="modal-section modal-section--algo">
-            <h3 class="modal-section-title">Core Algorithms</h3>
-            <p class="modal-text" style="margin-bottom:1.5rem">Two custom algorithms sit at the heart of this platform —
+            <h3 class="modal-section-title" data-i18n="modal-algo-title">Core Algorithms</h3>
+            <p class="modal-text" style="margin-bottom:1.5rem" data-i18n="modal-algo-desc">Two custom algorithms sit at the heart of this platform —
               written from scratch to solve real operational constraints, not off-the-shelf solutions.</p>
             <div class="algo-cards">
 
@@ -280,10 +280,10 @@
                   </div>
                   <div>
                     <div class="algo-tag">S-DBLF Heuristic</div>
-                    <h4 class="algo-title">3D Bin Packing</h4>
+                    <h4 class="algo-title" data-i18n="modal-pack-title">3D Bin Packing</h4>
                   </div>
                 </div>
-                <p class="algo-desc">Implements the <em>Simple-Deepest Bottom Left with Fill</em> heuristic to maximise
+                <p class="algo-desc" data-i18n="modal-pack-desc">Implements the <em>Simple-Deepest Bottom Left with Fill</em> heuristic to maximise
                   volumetric utilisation inside each container. Handles multi-leg voyages — packages are only
                   loaded/unloaded at the correct port stop — and supports both Full Container Load (FCL) and
                   Less-than-Container Load (LCL) shipments with weight and dimension constraints.</p>
@@ -291,7 +291,7 @@
                 <div class="algo-anim algo-anim--pack" aria-hidden="true">
                   <div class="pack-container">
                     <img src="assets/logisticsProject/PackingHeuristic.png" alt="Container Image" class="pack-image">
-                    <span class="pack-fill-label">Space utilisation</span>
+                    <span class="pack-fill-label" data-i18n="modal-pack-fill-label">Space utilisation</span>
                   </div>
                 </div>
               </div>
@@ -312,10 +312,10 @@
                   </div>
                   <div>
                     <div class="algo-tag">Recursive DFS</div>
-                    <h4 class="algo-title">Smart Pathfinding</h4>
+                    <h4 class="algo-title" data-i18n="modal-path-title">Smart Pathfinding</h4>
                   </div>
                 </div>
-                <p class="algo-desc">A custom recursive depth-first search that discovers all <em>time-feasible</em>
+                <p class="algo-desc" data-i18n="modal-path-desc">A custom recursive depth-first search that discovers all <em>time-feasible</em>
                   multi-port shipping routes between origin and destination. The algorithm respects voyage departure
                   dates, transshipment window constraints, and minimum connection times — then ranks candidate paths by
                   total transit duration so operators see the best option first.</p>
@@ -356,8 +356,8 @@
                     </defs>
                   </svg>
                   <div class="path-legend">
-                    <span class="path-legend-item path-legend-item--best">Optimal route</span>
-                    <span class="path-legend-item">Explored alternatives</span>
+                    <span class="path-legend-item path-legend-item--best" data-i18n="modal-path-legend-best">Optimal route</span>
+                    <span class="path-legend-item" data-i18n="modal-path-legend-alt">Explored alternatives</span>
                   </div>
                 </div>
               </div>
@@ -375,8 +375,8 @@
                     <circle cx="12" cy="12" r="2" />
                     <path d="M16.24 7.76a6 6 0 0 1 0 8.48M7.76 7.76a6 6 0 0 0 0 8.48M21.54 3.46a12 12 0 0 0-17.08 0" />
                   </svg></div>
-                <h4 class="mf-title">Live AIS Tracking</h4>
-                <p class="mf-desc">Vessel positions pulled via the Automatic Identification System. Delay detection
+                <h4 class="mf-title" data-i18n="modal-feat-ais-title">Live AIS Tracking</h4>
+                <p class="mf-desc" data-i18n="modal-feat-ais-desc">Vessel positions pulled via the Automatic Identification System. Delay detection
                   triggers real-time notifications and recalculates ETAs.</p>
               </div>
               <div class="modal-feature">
@@ -388,8 +388,8 @@
                     <circle cx="12" cy="5" r="1" />
                     <circle cx="12" cy="19" r="1" />
                   </svg></div>
-                <h4 class="mf-title">Expedition Lifecycle</h4>
-                <p class="mf-desc">Full state machine from pending → assigned → departed → completed, with automated
+                <h4 class="mf-title" data-i18n="modal-feat-exp-title">Expedition Lifecycle</h4>
+                <p class="mf-desc" data-i18n="modal-feat-exp-desc">Full state machine from pending → assigned → departed → completed, with automated
                   plan proposals and cancellation logic.</p>
               </div>
               <div class="modal-feature">
@@ -398,8 +398,8 @@
                     <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
                     <path d="M7 11V7a5 5 0 0 1 10 0v4" />
                   </svg></div>
-                <h4 class="mf-title">Role-Based Access</h4>
-                <p class="mf-desc">JWT AuthGuard middleware enforces separate permissions for clients, logistics
+                <h4 class="mf-title" data-i18n="modal-feat-rbac-title">Role-Based Access</h4>
+                <p class="mf-desc" data-i18n="modal-feat-rbac-desc">JWT AuthGuard middleware enforces separate permissions for clients, logistics
                   operators, and admins across all API endpoints.</p>
               </div>
               <div class="modal-feature">
@@ -410,8 +410,8 @@
                     <line x1="8" y1="2" x2="8" y2="6" />
                     <line x1="3" y1="10" x2="21" y2="10" />
                   </svg></div>
-                <h4 class="mf-title">Voyage Scheduling</h4>
-                <p class="mf-desc">Logistics operators manage multi-stop voyages through a calendar interface. New
+                <h4 class="mf-title" data-i18n="modal-feat-voyage-title">Voyage Scheduling</h4>
+                <p class="mf-desc" data-i18n="modal-feat-voyage-desc">Logistics operators manage multi-stop voyages through a calendar interface. New
                   schedules automatically trigger pending expedition reassignment.</p>
               </div>
             </div>
@@ -419,7 +419,7 @@
 
           <!-- REAL INTERFACE SCREENSHOTS — carousel -->
           <div class="modal-section">
-            <h3 class="modal-section-title">Interface</h3>
+            <h3 class="modal-section-title" data-i18n="modal-interface-title">Interface</h3>
 
             <div class="iface-carousel" id="iface-carousel">
 
@@ -429,14 +429,14 @@
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                     <polyline points="15 18 9 12 15 6" />
                   </svg>
-                  Prev
+                  <span data-i18n="modal-prev">Prev</span>
                 </button>
                 <span class="iface-slide-counter">
                   <span id="iface-cur">1</span> / <span id="iface-total">3</span>
                 </span>
                 <span class="iface-slide-lbl" id="iface-lbl">Container legs &amp; shipment packing</span>
                 <button class="iface-nav-btn" data-action="next" aria-label="Next screenshot">
-                  Next
+                  <span data-i18n="modal-next">Next</span>
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                     <polyline points="9 18 15 12 9 6" />
                   </svg>
@@ -494,14 +494,14 @@
 
           <!-- ARCHITECTURE NOTE -->
           <div class="modal-section modal-section--arch">
-            <h3 class="modal-section-title">Architecture</h3>
+            <h3 class="modal-section-title" data-i18n="modal-arch-title">Architecture</h3>
             <div class="modal-arch-content">
 
               <div class="modal-arch-image">
                 <img src="assets/logisticsProject/ArchiDiagram.drawio.png" alt="Architecture Image">
               </div>
               <div class="modal-text ">
-                <p>Mapping a traditional MVC architecture to a custom MEAN-stack-based backend
+                <p data-i18n="modal-arch-desc">Mapping a traditional MVC architecture to a custom MEAN-stack-based backend
                   presented challenges, particularly at the Model layer, since MongoDB is a NoSQL document
                   database and not inherently structured like relational systems.To address this, we adopted the
                   Mongoose library as an ODM (Object Document Mapper), which allowed to define schemas, enforce
@@ -521,8 +521,8 @@
                 <line x1="8" y1="17" x2="13" y2="17" />
               </svg>
               <span class="readme-toggle-copy">
-                <span class="readme-toggle-title">Show README file</span>
-                <span class="readme-toggle-sub">Full write-up: data model, pathfinding, packing heuristic, tracking,
+                <span class="readme-toggle-title" data-i18n="modal-readme-show">Show README file</span>
+                <span class="readme-toggle-sub" data-i18n="modal-readme-sub">Full write-up: data model, pathfinding, packing heuristic, tracking,
                   tests</span>
               </span>
               <span class="readme-toggle-chevron">▾</span>
@@ -533,45 +533,45 @@
               <!-- Fake GitHub file toolbar -->
               <div class="markdown-body">
 
-                <h1 class="gh-h1">Smart Container Logistics &amp; Tracking System</h1>
-                <p class="gh-p">Automated maritime expedition planning platform built for <strong>CTN – Compagnie
+                <h1 class="gh-h1" data-i18n="readme-h1">Smart Container Logistics &amp; Tracking System</h1>
+                <p class="gh-p" data-i18n="readme-intro-1">Automated maritime expedition planning platform built for <strong>CTN – Compagnie
                     Tunisienne de Navigation</strong>. Replaces manual logistics coordination with real-time algorithmic
                   shipment candidate generation — a client submits a shipment request and the system finds, packs, and
                   scores viable routes without agent involvement.</p>
-                <p class="gh-p">Centralized hub for clients and agents to manage shipments, schedule vessel voyages,
+                <p class="gh-p" data-i18n="readme-intro-2">Centralized hub for clients and agents to manage shipments, schedule vessel voyages,
                   manage and visualise container state (internal packing and scheduled routes) at any given time (past
                   and future).</p>
-                <p class="gh-p"><strong>Live demo →</strong> <a href="https://logistics-platform-mvp.vercel.app/"
+                <p class="gh-p"><strong><span data-i18n="readme-intro-3">Live demo →</span></strong> <a href="https://logistics-platform-mvp.vercel.app/"
                     target="_blank" rel="noopener">logistics-platform-mvp.vercel.app</a></p>
-                <p class="gh-p"><em>Also contains a ▶ 1-minute overview: transshipment, auto-assignment, routing, and
+                <p class="gh-p"><em data-i18n="readme-intro-4">Also contains a ▶ 1-minute overview: transshipment, auto-assignment, routing, and
                     container packing…</em></p>
 
                 <hr class="gh-hr">
 
-                <h2 class="gh-h2">The Core Challenge</h2>
-                <p class="gh-p">Shipping containers are not simply "sent from A to B." A single expedition may:</p>
+                <h2 class="gh-h2" data-i18n="readme-challenge-title">The Core Challenge</h2>
+                <p class="gh-p" data-i18n="readme-challenge-intro">Shipping containers are not simply "sent from A to B." A single expedition may:</p>
                 <ul class="gh-ul">
-                  <li>Share a container with other clients' cargo, where each group must stay together across every port
+                  <li data-i18n="readme-challenge-li-1">Share a container with other clients' cargo, where each group must stay together across every port
                   </li>
-                  <li>Transfer between different vessels at intermediate ports (transshipment) to reach its destination
+                  <li data-i18n="readme-challenge-li-2">Transfer between different vessels at intermediate ports (transshipment) to reach its destination
                   </li>
-                  <li>Compete for container space that is partially occupied by cargo loaded in said port at an earlier
+                  <li data-i18n="readme-challenge-li-3">Compete for container space that is partially occupied by cargo loaded in said port at an earlier
                     time</li>
                 </ul>
-                <p class="gh-p">All of this was previously handled manually — agents checking availability, estimating
+                <p class="gh-p" data-i18n="readme-challenge-outro">All of this was previously handled manually — agents checking availability, estimating
                   fit, and selecting routes from experience. The platform automates the entire decision chain.</p>
 
                 <hr class="gh-hr">
 
-                <h2 class="gh-h2">Architectural Decisions</h2>
-                <p class="gh-p">Two structural decisions made during design are what allow the algorithms to function.
+                <h2 class="gh-h2" data-i18n="readme-arch-title">Architectural Decisions</h2>
+                <p class="gh-p" data-i18n="readme-arch-intro">Two structural decisions made during design are what allow the algorithms to function.
                   Both required moving away from a naive model that seemed reasonable but collapsed under real
                   operational constraints.</p>
 
                 <hr class="gh-hr">
 
-                <h3 class="gh-h3">I. The Naive Model</h3>
-                <p class="gh-p"><em>The Problem</em></p>
+                <h3 class="gh-h3" data-i18n="readme-naive-title">I. The Naive Model</h3>
+                <p class="gh-p"><em data-i18n="readme-naive-problem">The Problem</em></p>
 
                 <p align="center" class="gh-fig-row">
                   <img src="assets/logisticsProject/readme/img1.png" alt="3 transhipment port france (3)"
@@ -579,99 +579,83 @@
                   <img src="assets/logisticsProject/readme/img2.png" alt="3 transhipment port france (2)"
                     style="width:49%;height:350px;object-fit:fill" loading="lazy" class="readMeImg">
                 </p>
-                <blockquote class="gh-quote gh-fig-caption"><strong>Figure 1</strong> · <em>Voyage and Container Legs
+                <blockquote class="gh-quote gh-fig-caption"><strong>Figure 1</strong> · <em data-i18n="readme-naive-fig1">Voyage and Container Legs
                     Sequence Example.</em></blockquote>
 
-                <p class="gh-p">The natural first instinct ties a container directly to a voyage.</p>
-                <p class="gh-p">This breaks immediately under real conditions:</p>
+                <p class="gh-p" data-i18n="readme-naive-p1">The natural first instinct ties a container directly to a voyage.</p>
+                <p class="gh-p" data-i18n="readme-naive-p2">This breaks immediately under real conditions:</p>
                 <ul class="gh-ul">
-                  <li><strong>Transshipment is unrepresentable.</strong> A container travelling Tunisia → Italy on
+                  <li data-i18n="readme-naive-li-1"><strong>Transshipment is unrepresentable.</strong> A container travelling Tunisia → Italy on
                     vessel 1, then Italy → France on vessel 2 cannot belong to both voyages. The model has no answer for
                     which one it belongs to.</li>
-                  <li><strong>Position within a journey is unknown.</strong> No intermediate stops exist — only a
+                  <li data-i18n="readme-naive-li-2"><strong>Position within a journey is unknown.</strong> No intermediate stops exist — only a
                     departure and arrival. The system knows "container is on voyage X" but not "container is between
                     port 2 and port 3 right now."</li>
-                  <li><strong>Partial boarding is impossible.</strong> A container that joins a vessel mid-route or
+                  <li data-i18n="readme-naive-li-3"><strong>Partial boarding is impossible.</strong> A container that joins a vessel mid-route or
                     disembarks before the final port cannot be expressed — it either belongs to the whole voyage or not
                     at all.</li>
                 </ul>
 
                 <hr class="gh-hr">
 
-                <h3 class="gh-h3">II. Voyage → VoyageLegs, Container → ContainerLegs</h3>
+                <h3 class="gh-h3" data-i18n="readme-legs-title">II. Voyage → VoyageLegs, Container → ContainerLegs</h3>
                 <p class="gh-fig-row">
                   <img src="assets/logisticsProject/readme/Vleg_Cleg_ERD.drawio (1).png" alt="Vleg_Cleg_ERD drawio"
                     width="931" height="452" loading="lazy" class="readMeImg">
                 </p>
-                <blockquote class="gh-quote gh-fig-caption"><strong>Figure 2</strong> · <em>partial ERD for Voyage and
+                <blockquote class="gh-quote gh-fig-caption"><strong>Figure 2</strong> · <em data-i18n="readme-legs-fig2">partial ERD for Voyage and
                     containerLeg.</em></blockquote>
 
-                <p class="gh-p">The Voyage entity was split into <strong>VoyageLegs</strong> — each a single
+                <p class="gh-p" data-i18n="readme-legs-p1">The Voyage entity was split into <strong>VoyageLegs</strong> — each a single
                   port-to-port segment. A voyage Tunisia → Italy → France becomes two legs. This gives the system
                   precise control over departure and arrival times at every intermediate stop, and makes it possible to
                   board or disembark a container at any point.</p>
-                <p class="gh-p">To mirror this on the container side, <strong>ContainerLeg</strong> tracks each segment
+                <p class="gh-p" data-i18n="readme-legs-p2">To mirror this on the container side, <strong>ContainerLeg</strong> tracks each segment
                   a container actually rides. A container transshipping between two vessels gets two ContainerLegs
                   mapped to two different VoyageLegs on two different voyages. A container that only joins a vessel at
                   an intermediate port starts its ContainerLeg sequence from that stop.</p>
 
                 <hr class="gh-hr">
 
-                <h3 class="gh-h3">◈ Pathfinding — Time-Constrained Recursive Search</h3>
-                <p class="gh-p">Standard graph pathfinding does not apply here. The routing graph is dynamic — an edge
+                <h3 class="gh-h3" data-i18n="readme-pathfinding-title">◈ Pathfinding — Time-Constrained Recursive Search</h3>
+                <p class="gh-p" data-i18n="readme-pathfinding-p1">Standard graph pathfinding does not apply here. The routing graph is dynamic — an edge
                   only exists if the voyage leg departs <em>after</em> the container arrives at that port. Shortest
                   distance is irrelevant; a geographically short route may be completely infeasible if the connecting
                   vessel has already left.</p>
-                <p class="gh-p">The algorithm is a custom recursive search:</p>
+                <p class="gh-p" data-i18n="readme-pathfinding-p2">The algorithm is a custom recursive search:</p>
                 <ul class="gh-ul">
-                  <li>From the origin port and ready date, fetch all voyage legs departing after arrival time — unused
+                  <li data-i18n="readme-pathfinding-li-1">From the origin port and ready date, fetch all voyage legs departing after arrival time — unused
                     voyages only, preventing cycles</li>
-                  <li>If a voyage reaches the destination directly, record the full leg sequence as a valid route</li>
-                  <li>Otherwise expand into each intermediate stop, incrementing a transshipment counter</li>
-                  <li>Prune any branch exceeding the maximum allowed transshipment count</li>
+                  <li data-i18n="readme-pathfinding-li-2">If a voyage reaches the destination directly, record the full leg sequence as a valid route</li>
+                  <li data-i18n="readme-pathfinding-li-3">Otherwise expand into each intermediate stop, incrementing a transshipment counter</li>
+                  <li data-i18n="readme-pathfinding-li-4">Prune any branch exceeding the maximum allowed transshipment count</li>
                 </ul>
-                <!------------------------------------------- to do -------------------------------------------------------->
-                <!-- <blockquote class="gh-quote">
-        <strong>Note on assets:</strong> The diagram below was generated with an AI image model.
-        I described the algorithm as I visualised it — voyage legs as physical lines
-        rising through a 3D time dimension, ports anchored on a flat plane below,
-        valid routes glowing gold through the branching structure. The prompt was written
-        from that mental model, not from a reference image.
-        All other assets in this README (screenshots, GIFs, diagrams) were captured
-        or created by hand from the live application.
-      </blockquote>
-
-      <p class="gh-fig-row">
-        <img src="assets/logisticsProject/readme/pathfinding.gif" alt="Pathfinding space-time visualisation" loading="lazy" class="readMeImg">
-      </p>
-      <blockquote class="gh-quote gh-fig-caption"><strong>Figure 3</strong> · <em>Pathfinding space-time visualisation</em></blockquote>
- -->
-                <p class="gh-p">The result is every time-feasible route a container can actually take, not theoretical
+                <p class="gh-p" data-i18n="readme-pathfinding-result">The result is every time-feasible route a container can actually take, not theoretical
                   shortest paths. Each route is a real sequence of schedulable voyage legs.</p>
 
                 <hr class="gh-hr">
 
-                <h3 class="gh-h3">III. Packages, Expeditions, and ContainerLoadSession</h3>
-                <p class="gh-p">Packages are not stored inside an expedition record. An expedition describes
+                <h3 class="gh-h3" data-i18n="readme-packages-title">III. Packages, Expeditions, and ContainerLoadSession</h3>
+                <p class="gh-p" data-i18n="readme-packages-p1">Packages are not stored inside an expedition record. An expedition describes
                   <em>what</em> needs to be shipped — destination, timing, cargo type. The <em>where</em> is tracked
                   separately.</p>
-                <p class="gh-p"><strong>ContainerLoadSession</strong> is the join entity that handles this. It links a
+                <p class="gh-p" data-i18n="readme-packages-p2"><strong>ContainerLoadSession</strong> is the join entity that handles this. It links a
                   package to a specific range of ContainerLegs and stores:</p>
                 <ul class="gh-ul">
-                  <li>The quantity of that package type in this container on these legs</li>
-                  <li>The exact 3D coordinates assigned to each unit by the packing heuristic</li>
+                  <li data-i18n="readme-packages-li-1">The quantity of that package type in this container on these legs</li>
+                  <li data-i18n="readme-packages-li-2">The exact 3D coordinates assigned to each unit by the packing heuristic</li>
                 </ul>
-                <p class="gh-p">The original package record stays untouched. Two sessions reference it independently.
+                <p class="gh-p" data-i18n="readme-packages-p3">The original package record stays untouched. Two sessions reference it independently.
                 </p>
 
                 <p class="gh-fig-row">
                   <img src="assets/logisticsProject/readme/package_handleing_ERD.drawio (1).png"
                     alt="ContainerLoadSession ERD" loading="lazy" class="readMeImg">
                 </p>
-                <blockquote class="gh-quote gh-fig-caption"><strong>Figure 4</strong> · <em>partial ERD for
+                <blockquote class="gh-quote gh-fig-caption"><strong>Figure 4</strong> · <em data-i18n="readme-packages-fig4">partial ERD for
                     containerLoadSession</em></blockquote>
 
-                <p class="gh-p">The problem this solves: a package group of 18 units may need to split across two
+                <p class="gh-p" data-i18n="readme-packages-p4">The problem this solves: a package group of 18 units may need to split across two
                   containers — 8 in C4 and 10 in C5 — because neither container alone has enough remaining space. With
                   packages tied directly to an expedition, representing this split requires duplicating or mutating the
                   package record. Neither is clean.</p>
@@ -682,10 +666,10 @@
                   <img src="assets/logisticsProject/readme/load_unload_OD_example.white.drawio.png"
                     alt="load_unload_OD_example" loading="lazy" class="readMeImg">
                 </p>
-                <blockquote class="gh-quote gh-fig-caption"><strong>Figure 5</strong> · <em>placed packages example UML
+                <blockquote class="gh-quote gh-fig-caption"><strong>Figure 5</strong> · <em data-i18n="readme-packages-fig5">placed packages example UML
                     Object Diagram</em></blockquote>
 
-                <p class="gh-p">This also enables container reuse. Before assigning any expedition, the system checks
+                <p class="gh-p" data-i18n="readme-packages-p5">This also enables container reuse. Before assigning any expedition, the system checks
                   whether all <strong>future</strong> legs of a candidate container have empty load sessions. The
                   current leg being empty is not enough — a container committed to cargo on a future leg is not
                   available, even if it looks free today.</p>
@@ -695,27 +679,27 @@
                     alt="Container C2 not staying empty and being reused for a new expedition"
                     style="width: 70%;height: auto ;object-fit: fill" loading="lazy" class="readMeImg">
                 </p>
-                <blockquote class="gh-quote gh-fig-caption"><strong>Figure 6</strong> · <em>containerLoadSession impact
+                <blockquote class="gh-quote gh-fig-caption"><strong>Figure 6</strong> · <em data-i18n="readme-packages-fig6">containerLoadSession impact
                     on container assignment</em></blockquote>
 
                 <hr class="gh-hr">
 
-                <h3 class="gh-h3">◈ 3D Container Packing — S-DBLF Heuristic</h3>
-                <p class="gh-p">With ContainerLoadSession normalising the relationship between packages and container
+                <h3 class="gh-h3" data-i18n="readme-packing-title">◈ 3D Container Packing — S-DBLF Heuristic</h3>
+                <p class="gh-p" data-i18n="readme-packing-p1">With ContainerLoadSession normalising the relationship between packages and container
                   legs, the packing heuristic can treat every unit — from existing sessions and new packages alike — as
                   identical objects in a shared space.</p>
-                <p class="gh-p"><strong>The implementation</strong> uses the <strong>S-DBLF (Simple Deepest Bottom-Left
+                <p class="gh-p" data-i18n="readme-packing-p2"><strong>The implementation</strong> uses the <strong>S-DBLF (Simple Deepest Bottom-Left
                     with Fill)</strong> heuristic for the offline 3D Bin Packing Problem. Packages are sorted by
                   descending volume, then placed one by one at the deepest, leftmost, back-most feasible position. After
                   each placement, three new candidate positions are generated at the boundaries of the placed box, and
                   the used position is removed.</p>
-                <p class="gh-p">The heuristic runs twice per expedition:</p>
+                <p class="gh-p" data-i18n="readme-packing-p3">The heuristic runs twice per expedition:</p>
                 <ol class="gh-ol">
-                  <li>Existing sessions are unfolded into individual units tagged <code>origin: existing</code>, placed
+                  <li data-i18n="readme-packing-li-1">Existing sessions are unfolded into individual units tagged <code>origin: existing</code>, placed
                     first, coordinates frozen</li>
-                  <li>New packages are unfolded into units tagged <code>origin: new</code>, placed into remaining space
+                  <li data-i18n="readme-packing-li-2">New packages are unfolded into units tagged <code>origin: new</code>, placed into remaining space
                   </li>
-                  <li>Results are re-grouped by session ID — the Heuristic stays pure (for future Heuristic nature
+                  <li data-i18n="readme-packing-li-3">Results are re-grouped by session ID — the Heuristic stays pure (for future Heuristic nature
                     changes), business logic lives in the wrapper</li>
                 </ol>
 
@@ -723,8 +707,8 @@
                   <img src="assets/logisticsProject/readme/SDBLF-Pseudo-Code.png"
                     alt="Pseudo-code for the S-DBLF packing method" loading="lazy" class="readMeImg">
                 </p>
-                <blockquote class="gh-quote gh-fig-caption"><strong>Figure 7</strong> · <em>Pseudo-code for the S-DBLF
-                    packing methodt</em></blockquote>
+                <blockquote class="gh-quote gh-fig-caption"><strong>Figure 7</strong> · <em data-i18n="readme-packing-fig7">Pseudo-code for the S-DBLF
+                    packing method</em></blockquote>
 
                 <blockquote class="gh-quote gh-quote--nested">
                   <strong>A Hybrid Genetic Algorithm for Packing in 3D with Deepest Bottom Left with Fill
@@ -735,14 +719,14 @@
                     target="_blank" rel="noopener">researchgate.net</a>
                 </blockquote>
 
-                <p class="gh-p"><strong>Try it live</strong> — the demo lets you add packages with custom dimensions and
+                <p class="gh-p" data-i18n="readme-packing-try"><strong>Try it live</strong> — the demo lets you add packages with custom dimensions and
                   watch the heuristic place them in real time inside a 3D container.</p>
 
                 <hr class="gh-hr">
 
-                <h3 class="gh-h3">Global Class Diagram</h3>
+                <h3 class="gh-h3" data-i18n="readme-classdiag-title">Global Class Diagram</h3>
                 <details class="gh-details">
-                  <summary>View full system class diagram</summary>
+                  <summary data-i18n="readme-classdiag-summary">View full system class diagram</summary>
                   <p class="gh-fig-row">
                     <img src="assets/logisticsProject/readme/ClassDiagWhite.png" alt="Global Class Diagram"
                       loading="lazy" class="readMeImg">
@@ -751,11 +735,11 @@
 
                 <hr class="gh-hr">
 
-                <h2 class="gh-h2">Live Vessel Tracking &amp; Delay Detection</h2>
-                <p class="gh-p">Vessel positions are fetched via the <strong>AIS (Automatic Identification System)
+                <h2 class="gh-h2" data-i18n="readme-tracking-title">Live Vessel Tracking &amp; Delay Detection</h2>
+                <p class="gh-p" data-i18n="readme-tracking-p1">Vessel positions are fetched via the <strong>AIS (Automatic Identification System)
                     API</strong> using each vessel's IMO number. Location data is cached on the vessel document and
                   refreshed only if the last update is older than five minutes.</p>
-                <p class="gh-p">Delay detection checks whether the vessel's live AIS position diverges from its
+                <p class="gh-p" data-i18n="readme-tracking-p2">Delay detection checks whether the vessel's live AIS position diverges from its
                   scheduled location for the current leg. One edge case handled explicitly: if the last AIS ping was
                   received before the leg's departure date, the vessel is at port waiting — not delayed. Without this
                   guard, every vessel sitting at dock before departure would trigger a false alert.</p>
@@ -795,59 +779,59 @@
 
                 <hr class="gh-hr">
 
-                <h2 class="gh-h2">Test Coverage</h2>
-                <p class="gh-p">The heuristic has a dedicated test suite covering:</p>
+                <h2 class="gh-h2" data-i18n="readme-testing-title">Test Coverage</h2>
+                <p class="gh-p" data-i18n="readme-testing-p1">The heuristic has a dedicated test suite covering:</p>
                 <ul class="gh-ul">
-                  <li>Single and multi-package placement</li>
-                  <li>Placement adjacent to existing frozen packages</li>
-                  <li>Exact boundary fits and overflow rejection</li>
-                  <li>Zero and negative dimension validation</li>
-                  <li>A fill-drain cycle: 1000 units placed one by one into a 10×10×10 container, all 1000 coordinates
+                  <li data-i18n="readme-testing-li-1">Single and multi-package placement</li>
+                  <li data-i18n="readme-testing-li-2">Placement adjacent to existing frozen packages</li>
+                  <li data-i18n="readme-testing-li-3">Exact boundary fits and overflow rejection</li>
+                  <li data-i18n="readme-testing-li-4">Zero and negative dimension validation</li>
+                  <li data-i18n="readme-testing-li-5">A fill-drain cycle: 1000 units placed one by one into a 10×10×10 container, all 1000 coordinates
                     verified unique, the 1001st confirmed to fail</li>
-                  <li>L-shaped gap detection — correctly rejects a package that would require non-rectangular remaining
+                  <li data-i18n="readme-testing-li-6">L-shaped gap detection — correctly rejects a package that would require non-rectangular remaining
                     space</li>
                 </ul>
-                <p class="gh-p">Candidate generation is covered by an integration test using
+                <p class="gh-p" data-i18n="readme-testing-p2">Candidate generation is covered by an integration test using
                   <code>MongoMemoryServer</code> — a real Mongoose instance seeded with voyage and container data,
                   validating the full assignment pipeline end to end.</p>
 
                 <hr class="gh-hr">
 
-                <h2 class="gh-h2">Stack</h2>
+                <h2 class="gh-h2" data-i18n="readme-stack-title">Stack</h2>
                 <table class="gh-table">
                   <thead>
                     <tr>
-                      <th>Layer</th>
-                      <th>Technology</th>
+                      <th data-i18n="readme-stack-layer">Layer</th>
+                      <th data-i18n="readme-stack-tech">Technology</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td>Frontend</td>
+                      <td data-i18n="readme-stack-frontend">Frontend</td>
                       <td>Angular 17, TypeScript, Bootstrap, Three.js</td>
                     </tr>
                     <tr>
-                      <td>Backend</td>
+                      <td data-i18n="readme-stack-backend">Backend</td>
                       <td>Node.js, Express.js, TypeScript</td>
                     </tr>
                     <tr>
-                      <td>Database</td>
+                      <td data-i18n="readme-stack-database">Database</td>
                       <td>MongoDB, Mongoose</td>
                     </tr>
                     <tr>
-                      <td>Auth</td>
+                      <td data-i18n="readme-stack-auth">Auth</td>
                       <td>JWT, role-based AuthGuard middleware</td>
                     </tr>
                     <tr>
-                      <td>Tracking</td>
+                      <td data-i18n="readme-stack-tracking">Tracking</td>
                       <td>AIS API (myshiptracking.com)</td>
                     </tr>
                     <tr>
-                      <td>Testing</td>
+                      <td data-i18n="readme-stack-testing">Testing</td>
                       <td>Jest, MongoMemoryServer</td>
                     </tr>
                     <tr>
-                      <td>Deployment</td>
+                      <td data-i18n="readme-stack-deployment">Deployment</td>
                       <td>Vercel (frontend)</td>
                     </tr>
                   </tbody>
@@ -856,7 +840,7 @@
 
                 <hr class="gh-hr">
 
-                <p class="gh-p"><em>Final-year Bachelor's internship — Faculty of Sciences of Monastir (FSM) × CTN –
+                <p class="gh-p"><em data-i18n="readme-footer">Final-year Bachelor's internship — Faculty of Sciences of Monastir (FSM) × CTN –
                     Compagnie Tunisienne de Navigation.</em></p>
 
               </div><!-- /markdown-body -->
